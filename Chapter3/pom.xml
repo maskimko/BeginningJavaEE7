@@ -9,6 +9,7 @@
     <artifactId>Chapter3</artifactId>
     <version>0.0-snapshot</version>
     <packaging>jar</packaging>
+    <name>Validation</name>
     <dependencies>
         <dependency>
             <groupId>org.hibernate</groupId>
