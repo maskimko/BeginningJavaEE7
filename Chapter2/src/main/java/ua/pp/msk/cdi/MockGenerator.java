@@ -14,13 +14,14 @@ import javax.inject.Inject;
  *
  * @author maskimko
  */
-@ThirteenDigits
 @Alternative
-public class MockGenerator {
+@ThirteenDigits
+public class MockGenerator implements NumberGenerator{
     
     @Inject
     private Logger logger;
     
+    @Loggable
     public String generateNumber(){
         String mock = "MOCK-" + Math.abs(new Random().nextInt());
         logger.info("Generated MOCK : " + mock);

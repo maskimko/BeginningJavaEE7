@@ -5,18 +5,20 @@
  */
 package ua.pp.msk.cdi;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author maskimko
  */
-public class Book {
+public class Book implements Serializable {
 
     private String title;
     private float price;
     private String description;
     private String number;
+    private static final long serialVersionUID = 1L;
 
     public Book() {
     }
@@ -29,7 +31,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" + "title=" + title + ", price=" + price + ", description=" + description + ", number=" + number + '}';
+        return "Book{" + "title=" + title + ", price=" + price + ", description=" + description + ", isbn=" + number + '}';
     }
 
     @Override
