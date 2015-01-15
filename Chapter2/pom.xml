@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>ua.pp.msk</groupId>
-    <artifactId>Chaper2</artifactId>
+    <groupId>ua.pp.msk.javaee7</groupId>
+    <artifactId>chapter02</artifactId>
     <version>0.1</version>
     <packaging>jar</packaging>
+    <parent>
+	<groupId>ua.pp.msk.javaee7</groupId>
+	<artifactId>parent</artifactId>
+	<version>0.1</version>
+    </parent>
     <dependencies>
         <dependency>
             <groupId>org.jboss.weld.se</groupId>
