@@ -5,6 +5,9 @@
  */
 package ua.pp.msk.javaee7.chapter3;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import javax.inject.Inject;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
@@ -14,14 +17,24 @@ import javax.validation.ConstraintValidatorContext;
  */
 public class ZipCodeValidator implements ConstraintValidator<ZipCode, String>{
 
+    @Inject @USA
+    private ZipCodeChecker checker;
+    private Pattern zipPattern = Pattern.compile("\\d{5}(-\\d{5})?");
+    
     @Override
     public void initialize(ZipCode a) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public boolean isValid(String t, ConstraintValidatorContext cvc) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (t == null)
+            return true;
+        
+        Matcher m = zipPattern.matcher(t);
+        if (!m.matches())
+            return false;
+        
+        return checker.isZipCodeValid(t);
     }
     
 }
