@@ -6,8 +6,9 @@
         <artifactId>parent</artifactId>
         <version>1.0</version>
     </parent>
-    <artifactId>JPA</artifactId>
+    <artifactId>Chapter4</artifactId>
     <packaging>jar</packaging>
+    <name>JPA</name>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
